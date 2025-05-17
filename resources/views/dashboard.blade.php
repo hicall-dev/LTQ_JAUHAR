@@ -4,7 +4,7 @@
 
     @if (session()->has('success'))
         <div id="alert-0"
-            class="flex items-center p-4 mb-4 text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400"
+            class="flex items-center p-4 mb-4 text-green-800 rounded-lg bg-green-100 dark:bg-gray-800 dark:text-green-400"
             role="alert">
             <svg class="flex-shrink-0 w-4 h-4" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
                 <path
@@ -15,7 +15,7 @@
                 <span class="font-medium pl-3">Pemberitahuan</span> {{ session('success') }}
             </div>
             <button type="button"
-                class="ms-auto -mx-1.5 -my-1.5 bg-blue-50 text-blue-500 rounded-lg focus:ring-2 focus:ring-blue-400 p-1.5 hover:bg-blue-200 inline-flex items-center justify-center h-8 w-8 dark:bg-gray-800 dark:text-blue-400 dark:hover:bg-gray-700"
+                class="ms-auto -mx-1.5 -my-1.5 bg-green-200 text-green-500 rounded-lg focus:ring-2 focus:ring-green-400 p-1.5 hover:bg-green-200 inline-flex items-center justify-center h-8 w-8 dark:bg-gray-800 dark:text-green-400 dark:hover:bg-gray-700"
                 data-dismiss-target="#alert-0" aria-label="Close">
                 <span class="sr-only">Close</span>
                 <svg class="w-3 h-3" aria-hidden="true" fill="none" viewBox="0 0 14 14">
@@ -28,21 +28,8 @@
 
     <h1 class=" mb-1 text-5xl tracking-tight font-bold text-gray-900">{{ $judul }}</h1>
     <div class=" my-9 mx-auto flex flex-wrap justify-end items-center">
-        {{-- <div>
-            <button data-modal-target="reset-modal" data-modal-toggle="reset-modal"
-                class=" mt-6 mb-1 w-fit h-fit inline-flex justify-center items-center rounded-md bg-red-500 px-3 py-2 font-semibold text-white shadow-sm hover:bg-red-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
-                type="button">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="-ml-0.5 mr-1.5 size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d=" M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374
-        1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12
-        15.75h.007v.008H12v-.008Z" />
-                </svg>
-                Reset SPP
-            </button>
-        </div> --}}
         <a href="/dashboard/promo"
-            class=" mt-6 mb-1 mx-2 w-fit h-fit inline-flex justify-center items-center rounded-md bg-blue-600 px-3 py-2  font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">
+            class=" mt-6 mb-1 mx-2 w-fit h-fit inline-flex justify-center items-center rounded-md bg-green-500 px-3 py-2  font-semibold text-white shadow-sm hover:bg-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-500">
             <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                 class="-ml-0.5 mr-1.5 size-6">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -51,7 +38,7 @@
             PROMO
         </a>
         <a href="/dashboard/santri/create"
-            class=" mt-6 mb-1 w-fit h-fit inline-flex justify-center items-center rounded-md bg-blue-600 px-3 py-2  font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">
+            class=" mt-6 mb-1 w-fit h-fit inline-flex justify-center items-center rounded-md bg-green-500 px-3 py-2  font-semibold text-white shadow-sm hover:bg-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-500">
             <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                 class="-ml-0.5 mr-1.5 size-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d=" M12 4.5v15m7.5-7.5h-15">
@@ -64,14 +51,14 @@
     <form>
         <div class="my-9 flex ">
             <div
-                class=" w-full rounded-md shadow-sm mr-2 ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-blue-600">
+                class=" w-full rounded-md shadow-sm mr-2 ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-green-600">
                 <input type="search" id="search" name="search" autocomplete="off"
                     class=" block w-full flex-auto border-0 bg-transparent py-3 px-3 text-gray-900 placeholder:text-gray-400 focus:ring-0  leading-6 rounded-md"
                     placeholder="Cari Berdasarkan Nama atau NIS">
 
             </div>
             <button type="submit"
-                class="inline-flex justify-center items-center rounded-md bg-blue-600 px-4 font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">
+                class="inline-flex justify-center items-center rounded-md bg-green-500 px-4 font-semibold text-white shadow-sm hover:bg-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-500">
                 <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class=" my-3 size-6">
                     <path stroke-linecap="round" stroke-linejoin="round"
                         d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
@@ -83,16 +70,16 @@
             <div class="flex flex-wrap justify-center items-center rounded-md">
                 <button
                     class="w-fit mx-2 rounded-md bg-blue-600 px-3 py-2 my-2 font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
-                    type="sumbit" onclick="setSearchValue('Putra Sore')">Putra Sore ({{ $putrasore }})</button>
-                <button
-                    class="w-fit mx-2 rounded-md bg-blue-600 px-3 py-2 v font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
-                    type="sumbit" onclick="setSearchValue('Putra Malam')">Putra Malam ({{ $putramalam }})</button>
+                    type="sumbit" onclick="setSearchValue('Putra')">Santri Putra ({{ $putra }})</button>
                 <button
                     class="w-fit mx-2 rounded-md bg-blue-600 px-3 py-2 my-2 font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
-                    type="sumbit" onclick="setSearchValue('Putri Pagi')">Putri Pagi ({{ $putripagi }})</button>
+                    type="submit" onclick="setSearchValue('Putri')">Santri Putri ({{ $putri }})</button>
                 <button
                     class="w-fit mx-2 rounded-md bg-blue-600 px-3 py-2 my-2 font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
-                    type="submit" onclick="setSearchValue('Putri Sore')">Putri Sore ({{ $putrisore }})</button>
+                    type="sumbit" onclick="setSearchValue('Tahsin')">Tahsin ({{ $tahsin }})</button>
+                <button
+                    class="w-fit mx-2 rounded-md bg-blue-600 px-3 py-2 my-2 font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                    type="submit" onclick="setSearchValue('Tahfizh')">Tahfizh ({{ $tahfizh }})</button>
                 <input type="hidden" name="spp" id="spp">
                 <button
                     class="w-fit mx-2 rounded-md bg-green-500 px-3 py-2 my-2 font-semibold text-white shadow-sm hover:bg-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-500"
@@ -111,7 +98,7 @@
     {{-- TABEL --}}
     <div class=" mt-10 relative overflow-x-auto shadow-md rounded-lg">
         <table class=" w-full text-center">
-            <thead class="uppercase bg-blue-500 dark:bg-blue-700 text-white">
+            <thead class="uppercase bg-green-500 dark:bg-green-700 text-white">
                 <tr>
                     <th class=" px-3 py-3">Nama</th>
                     <th class=" px-3 py-3">NIS</th>
@@ -182,7 +169,7 @@
         <div class="flex items-center justify-between">
             <div class="px-3 py-3 font-semibold text-xl"> Data Santri Kosong </div>
             <a href="/dashboard/santri"
-                class=" w-fit inline-flex justify-center items-center rounded-md bg-blue-600 px-3 py-2 mr-3  font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">
+                class=" w-fit inline-flex justify-center items-center rounded-md bg-green-500 px-3 py-2 mr-3  font-semibold text-white shadow-sm hover:bg-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-500">
                 <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                     class="-ml-0.5 mr-1.5 size-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />

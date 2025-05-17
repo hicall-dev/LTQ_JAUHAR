@@ -201,7 +201,7 @@
                     <img src="{{ public_path('img/logo.png') }}" width="80" height="80" alt="">
                 </td>
                 <td>
-                    <h2>LEMBAGA TAHSIN & TAHFIZH QURAN TERPADU KHOIRUNNASYIEN</h2>
+                    <h2>LEMBAGA TAHSIN & TAHFIZH QURAN TERPADU AL JAUHAR</h2>
                 </td>
             </tr>
         </table>
@@ -286,13 +286,7 @@
             <p>
                 Dengan ini, saya menyatakan bahwa data yang tertera di atas adalah benar. Saya dan anak didik saya
                 bersedia mengikuti peraturan yang berlaku di lembaga ini serta memahami bahwa apabila melanggar
-                peraturan, saya atau anak didik saya bersedia diberikan sanksi sesuai ketentuan yang berlaku.
-            </p>
-            <p>
-                Saya juga mengonfirmasi bahwa anak didik saya siap mengikuti jadwal yang telah ditentukan, yaitu
-                jadwal
-
-                <span class="kelas">{{ $data['kelas'] ?? '....................' }}</span>.
+                peraturan, saya atau anak didik saya bersedia diberikan sanksi sesuai ketentuan yang berlaku.Saya juga mengonfirmasi bahwa anak didik saya siap mengikuti jadwal yang telah ditentukan.
             </p>
 
             <div>

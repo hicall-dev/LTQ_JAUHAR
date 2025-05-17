@@ -1,14 +1,13 @@
 <div
     class=" bg-white bottom-0 w-full shadow-inner sm:flex sm:items-center sm:justify-between p-4 sm:p-6 xl:p-8 dark:bg-gray-800 antialiased clear-both ">
     <p class="mb-4 text-sm text-left text-black dark:text-gray-400 sm:mb-0">
-        &copy; 2012 - 2024 | LEMBAGA PENDIDIKAN TAHSIN & TAHFIZH AL-QURAN KHOIRUNNASYIEN
-        <br> Jln. Dr. M. Isa ( Samping Lrg Swadaya )
-        No.900 Kec 8 Ilir IT III - Kuto Batu Palembang
-        <br> No Whatsapp : 089679479654
+        &copy; LEMBAGA PENDIDIKAN TAHSIN & TAHFIZH AL-QUR'AN AL JAUHAR
+        <br> Jln. Upaya - Samping Masjid Jauharul Iman - Komperta Plaju Palembang
+        <br> No Whatsapp : 0895342166757
     </p>
 
     <div class="flex justify-center items-center space-x-1">
-        <a href="https://wa.me/6289679479654" target="_blank" data-tooltip-target="tooltip-twitter"
+        <a href="https://wa.me/62895342166757" target="_blank" data-tooltip-target="tooltip-twitter"
             class="inline-flex justify-center p-2 text-black rounded-lg cursor-pointer dark:text-gray-400 dark:hover:text-white hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600">
             <svg class="w-8 h-8 text-black" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"
                 xmlns="http://www.w3.org/2000/svg">
@@ -27,7 +26,7 @@
             Hubungi Kami Melalui WhatsApp
             <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
-        <a href="https://www.instagram.com/lpttq.khoirunnasyien/" target="_blank" data-tooltip-target="tooltip-facebook" 
+        {{-- <a href="https://www.instagram.com/lpttq.khoirunnasyien/" target="_blank" data-tooltip-target="tooltip-facebook" 
             class="inline-flex justify-center p-2 text-black rounded-lg cursor-pointer dark:text-gray-400 dark:hover:text-white hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600">
             <svg class="w-8 h-8 text-black" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"
                 xmlns="http://www.w3.org/2000/svg">
@@ -42,8 +41,8 @@
             class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
             Lihat Kami Pada Instagram
             <div class="tooltip-arrow" data-popper-arrow></div>
-        </div>
-        <a href="https://maps.app.goo.gl/cckwyMXaAK6VrDmB9" target="_blank" data-tooltip-target="tooltip-github"
+        </div> --}}
+        <a href="https://maps.app.goo.gl/8m8Z7Zot8dWMHXae8" target="_blank" data-tooltip-target="tooltip-github"
             class="inline-flex justify-center p-2 text-black rounded-lg cursor-pointer dark:text-gray-400 dark:hover:text-white hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600">
             <svg class="w-8 h-8 text-black" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"
                 xmlns="http://www.w3.org/2000/svg">

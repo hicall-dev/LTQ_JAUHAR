@@ -28,7 +28,7 @@
                     <span class="text-red-500 text-sm">{{ $message }}</span>
                 @enderror
             </div>
-            <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition">
+            <button type="submit" class="w-full bg-green-500 text-white py-2 rounded hover:bg-green-600 transition">
                 Upload
             </button>
             <div id="preview-container" class="mb-4">

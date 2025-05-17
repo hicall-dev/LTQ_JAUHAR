@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="bg-gray-200">
+<html lang="en" class="lg:bg-gray-200 sm:bg-white">
 
 <head>
     <meta charset="UTF-8">
@@ -15,7 +15,7 @@
 
 <x-navbarhome></x-navbarhome>
 
-<body class="bg-cyan-200">
+<body class="lg:bg-lime-300">
     <div class=" min-h-screen">
         <main>
             {{-- BANNER --}}
@@ -23,7 +23,7 @@
                 <source media="(min-width: 768px)" srcset="{{ asset('img/banner2.jpg') }}">
                 <img src="{{ asset('img/banner1.jpg') }}" alt="">
                 </picture>
-            <div class="mx-auto max-w-7xl px-4 pt-2 pb-32 sm:px-6 lg:px-8 bg-white">
+            <div class="mx-auto max-w-7xl h-full px-4 pt-2 pb-32 sm:px-6 lg:px-8 bg-white">
                 {{ $slot }}
             </div>
         </main>

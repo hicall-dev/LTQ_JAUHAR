@@ -12,11 +12,11 @@ use App\Http\Controllers\DashboardSantriController;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 Route::get('/', function () {
-    return view('home', ['title' => 'KHOIRUNNASYIEN']);
+    return view('home', ['title' => 'AL JAUHAR']);
 });
 
 Route::get('/pendaftaran', function () {
-$dataKelas = [
+    $dataKelas = [
         [
             'nama' => 'Putra Sore',
             'waktu' => '15.00 - 17.30',

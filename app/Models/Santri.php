@@ -33,7 +33,8 @@ class Santri extends Model
             $query->where(function ($q) use ($search) {
                 $q->where('santris.nama', 'like', "%$search%")
                     ->orWhere('santris.nis', 'like', "%$search%")
-                    ->orWhere('santris.golongan', 'like', "%$search%");
+                    ->orWhere('santris.golongan', 'like', "%$search%")
+                    ->orWhere('santris.kelas', 'like', "%$search%");
             });
         }
 

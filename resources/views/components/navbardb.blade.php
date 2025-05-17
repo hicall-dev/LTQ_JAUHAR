@@ -3,7 +3,7 @@
         <div class="flex h-16 items-center justify-between">
             <div class="flex items-center">
                 <div class="flex-shrink-0">
-                    <img class="h-8 w-8" src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=500"
+                    <img class="h-8 w-8" src="{{ asset('/img/logo.png') }}"
                         alt="Your Company">
                 </div>
                 <div class="max-w-7xl px-4 py-6 sm:px-6 lg:px-8">

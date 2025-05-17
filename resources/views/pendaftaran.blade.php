@@ -6,20 +6,20 @@
 <x-layouthome>
     <x-slot:title>{{ $title }}</x-slot:title>
     <div id="pendaftaran" class="my-10">
-        <h1 class="text-3xl font-bold text-center tracking-widest py-5 border-b-4 border-blue-500">
+        <h1 class="text-3xl font-bold text-center tracking-widest py-5 border-b-4 border-lime-500">
             PENDAFTARAN</h1>
         @if (session()->has('data'))
             <div class="flex justify-center items-center">
                 <div class=" w-4/5  px-5 py-5 rounded-lg shadow-md">
                     <h1
-                        class=" mb-1 w-full text-center text-3xl tracking-wide font-bold text-white bg-blue-500 px-2 py-2 rounded-lg shadow-inner">
+                        class=" mb-1 w-full text-center text-3xl tracking-wide font-bold text-white bg-gradient-to-br to-green-500 from-lime-500 px-2 py-2 rounded-lg shadow-inner">
                         Prosedur Setelah Pendfataran</h1>
                     <ul class="p-3 space-y-3 list-disc list-inside text-lg ">
                         <p class="font-bold">1. Unduh Formulir</p>
                         <li>Unduh file formulir pendaftaran yang telah diisi sebelumnya pada tombol dibawah</li>
                         <li>
                             <a href="/unduh-formulir"
-                                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                class="bg-gradient-to-tr to-green-500 from-lime-500  hover:bg-lime-200 text-white font-bold py-2 px-4 rounded">
                                 Unduh Formulir
                             </a>
                         </li>
@@ -36,9 +36,8 @@
                         <li>Pembayaran secara Tunai dapat dilakukan Langsung di gedung lembaga.</li>
                         <li>Pembayaran secara Non-tunai melalui transfer ke rekening berikut :</li>
                         <li>
-                            <span class=" py-2 px-3 rounded-md font-bold text-white bg-blue-500 w-fit"> Rekening BSI :
-                                7117245448 a.n
-                                Fahmi Ramdani</span>
+                            <span class=" py-2 px-3 rounded-md font-bold text-white bg-gradient-to-tr to-green-500 from-lime-500 w-fit"> BNI | 8120919767 | yys Syifa Al Mukminin 
+                            </span>
                         </li>
                         <p class="font-bold">Kirimkan Dokumen untuk Konfirmasi</p>
                         <li>Kirimkan formulir pendaftaran yang telah diisi lengkap beserta bukti pembayaran (jika
@@ -47,7 +46,7 @@
                         </li>
                         <li>
                             <a href="https://wa.me/6289679479654" target="_blank"
-                                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                class="bg-gradient-to-tr to-green-500 from-lime-500 hover:bg-lime-700 text-white font-bold py-2 px-4 rounded">
                                 089679479654
                             </a>
                         </li>
@@ -55,7 +54,7 @@
                     <br>
 
                     <a href="/pendaftaran_"
-                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-center">Kembali</a>
+                        class="bg-gradient-to-br to-green-500 from-lime-500 hover:bg-lime-700 text-white font-bold py-2 px-4 rounded text-center">Kembali</a>
                 </div>
             </div>
         @else
@@ -73,13 +72,15 @@
                         class="w-2/3 px-4 py-2 border rounded-md focus:outline-none focus:ring focus:ring-blue-200">
                 </div>
 
+                <!-- Jenis Kelamin -->
                 <div class="flex items-center space-x-4">
                     <label for="jenis_kelamin" class="text-gray-700 font-semibold w-1/3">Jenis Kelamin</label>
                     <div class="w-2/3">
                         <select id="jenis_kelamin" name="jenis_kelamin"
-                            class="block w-full rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                            class="block w-full rounded-md shadow-sm focus:ring-green-500 focus:border-green-500"
+                            onchange="setKelasOtomatis()">
                             <option value="" disabled selected>-</option>
-                            <option value="Laki-laki" class="text-blue-600">Laki-laki</option>
+                            <option value="Laki-Laki" class="text-blue-600">Laki-Laki</option>
                             <option value="Perempuan" class="text-pink-600">Perempuan</option>
                         </select>
                     </div>
@@ -152,39 +153,23 @@
                 <!-- Bagian Santri -->
                 <br>
                 <hr class="border-t border-blue-500 my-8">
-                <h2 class=" text-xs font-semibold text-gray-700">*Jadwal Kelas akan muncul ketika Jenis Kelamin telah
+                {{-- <h2 class=" text-xs font-semibold text-gray-700">*Jadwal Kelas akan muncul ketika Jenis Kelamin telah
                     diisi
                 </h2>
                 <h2 class="text-xl font-semibold text-gray-700">Jadwal Belajar</h2>
-                <div class="flex items-center space-x-4">
-                    <label class="text-gray-700 font-semibold w-1/3" for="kelas">Pilih Waktu Belajar</label>
-                    <div class=" items-center justify-center  w-2/3">
-                        <div>
-                            <select id="kelas" name="kelas"
-                                class="block w-full mt-1 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
-                                <option value="Putra Sore" class="text-blue-600">Putra Sore</option>
-                                <option value="Putra Malam" class="text-blue-600">Putra Malam</option>
-                                <option value="Putri Sore" class="text-pink-600">Putri Sore</option>
-                                <option value="Putri Pagi" class="text-pink-600">Putri Pagi</option>
-                            </select>
-                        </div>
-
+                <!-- Waktu Belajar -->
+                <div class="flex items-center space-x-4 mt-4">
+                    <label class="text-gray-700 font-semibold w-1/3" for="kelas">Waktu Belajar</label>
+                    <div class="w-2/3">
+                        <select id="kelas" name="kelas"
+                            class="block w-full mt-1 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                            disabled>
+                            <option value="" disabled selected>-</option>
+                        </select>
                     </div>
-                </div>
+                </div> --}}
 
 
-                <div id="kelas_laki_laki" class="hidden">
-
-                </div>
-
-                <div id="kelas_perempuan" class="hidden">
-                    <div class="flex items-center space-x-4">
-                        <label class="text-gray-700 font-semibold w-1/3">Pilih Waktu Belajar</label>
-                        <div class="flex items-center space-x-6 w-2/3">
-
-                        </div>
-                    </div>
-                </div>
 
                 <div class="mb-6">
                     <label for="signature" class="block mb-2 text-xl font-semibold text-gray-700">Tanda Tangan</label>
@@ -209,17 +194,28 @@
     </div>
 
     <script>
-        function toggleKelas() {
-            // Menyembunyikan semua pilihan kelas terlebih dahulu
-            document.getElementById("kelas_laki_laki").classList.add("hidden");
-            document.getElementById("kelas_perempuan").classList.add("hidden");
+        function setKelasOtomatis() {
+            const gender = document.getElementById("jenis_kelamin").value;
+            const kelasSelect = document.getElementById("kelas");
 
-            // Menampilkan pilihan kelas berdasarkan jenis kelamin yang dipilih
-            if (document.getElementById("laki_laki").checked) {
-                document.getElementById("kelas_laki_laki").classList.remove("hidden");
-            } else if (document.getElementById("perempuan").checked) {
-                document.getElementById("kelas_perempuan").classList.remove("hidden");
+            // Kosongkan dulu semua opsi
+            kelasSelect.innerHTML = "";
+
+            // Buat opsi baru sesuai gender
+            let option = document.createElement("option");
+            option.selected = true;
+            option.disabled = false;
+
+            if (gender === "Laki-laki") {
+                option.value = "Putra Malam";
+                option.text = "Putra Malam";
+            } else if (gender === "Perempuan") {
+                option.value = "Putri Malam";
+                option.text = "Putri Malam";
             }
+
+            kelasSelect.appendChild(option);
+            kelasSelect.disabled = true; // Tidak bisa diubah
         }
 
         // CANVAS

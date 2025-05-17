@@ -3,7 +3,7 @@
     <x-slot:title>{{ $title }}</x-slot:title>
     @if (session()->has('createSuccess'))
         <div id="alert-0"
-            class="flex items-center p-4 mb-4 text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400"
+            class="flex items-center p-4 mb-4 text-green-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-green-400"
             role="alert">
             <svg class="flex-shrink-0 w-4 h-4" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
                 <path
@@ -14,7 +14,7 @@
                 <span class="font-medium pl-3">Pemberitahuan </span> {{ session('createSuccess') }}
             </div>
             <button type="button"
-                class="ms-auto -mx-1.5 -my-1.5 bg-blue-50 text-blue-500 rounded-lg focus:ring-2 focus:ring-blue-400 p-1.5 hover:bg-blue-200 inline-flex items-center justify-center h-8 w-8 dark:bg-gray-800 dark:text-blue-400 dark:hover:bg-gray-700"
+                class="ms-auto -mx-1.5 -my-1.5 bg-blue-50 text-green-500 rounded-lg focus:ring-2 focus:ring-green-400 p-1.5 hover:bg-blue-200 inline-flex items-center justify-center h-8 w-8 dark:bg-gray-800 dark:text-green-400 dark:hover:bg-gray-700"
                 data-dismiss-target="#alert-0" aria-label="Close">
                 <span class="sr-only">Close</span>
                 <svg class="w-3 h-3" aria-hidden="true" fill="none" viewBox="0 0 14 14">
@@ -65,7 +65,7 @@
                         <div class="mt-2">
                             <input type="text" name="nama" id="nama"
                                 value="{{ isset($santri) ? $santri->nama : '' }}"
-                                class="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600  leading-6"
+                                class="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-lime-600  leading-6"
                                 required="">
                         </div>
                     </div>
@@ -76,7 +76,7 @@
                             <div class="mt-2">
                                 <input type="number" name="nis" id="nis"
                                     value="{{ isset($santri) ? $santri->nis : old('nis') }}"
-                                    class="block w-full px-3 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 leading-6 peer @error('nis') border-red-500 @enderror"
+                                    class="block w-full px-3 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-lime-600 leading-6 peer @error('nis') border-red-500 @enderror"
                                     required>
                             </div>
                         </label>
@@ -87,7 +87,7 @@
                         <div class="mt-2">
                             <input type="text" name="tempat_lahir" id="tempat_lahir"
                                 value="{{ isset($santri) ? $santri->tempat_lahir : '' }}"
-                                class="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600  leading-6"
+                                class="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-lime-600  leading-6"
                                 required="">
                         </div>
                     </div>
@@ -97,31 +97,33 @@
                         <div class="mt-2">
                             <input type="date" name="tanggal_lahir" id="tanggal_lahir"
                                 value="{{ isset($santri) ? $santri->tanggal_lahir : '' }}"
-                                class="block w-full  px-3 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600  leading-6"
+                                class="block w-full  px-3 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-lime-600  leading-6"
                                 onfocus="this.showPicker && this.showPicker()">
                         </div>
                     </div>
 
                     @php
                         $kelasList = [
-                            'Tahsin Awwal',
-                            'Tahsin Akhir',
-                            'Mutawassith',
-                            'Pra Takhossus Awwal',
-                            'Pra Takhossus Akhir',
-                            'Takhossus Awwal',
-                            'Takhossus Tsani',
-                            'Takhossus Tsalits',
-                            'Takhossus Robi',
-                            'Takhossus Khomis',
-                            'Takhossus Akhir',
+                            'Tahsin',
+                            'Tahfizh'
+                            // 'Tahsin Awwal',
+                            // 'Tahsin Akhir',
+                            // 'Mutawassith',
+                            // 'Pra Takhossus Awwal',
+                            // 'Pra Takhossus Akhir',
+                            // 'Takhossus Awwal',
+                            // 'Takhossus Tsani',
+                            // 'Takhossus Tsalits',
+                            // 'Takhossus Robi',
+                            // 'Takhossus Khomis',
+                            // 'Takhossus Akhir',
                         ];
                     @endphp
                     <div class="col-span-3">
                         <label for="kelas" class="block  font-medium leading-6 text-gray-900">Kelas</label>
                         <div class="mt-2">
                             <select id="kelas" name="kelas"
-                                class="block w-full px-3 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600  leading-6"
+                                class="block w-full px-3 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-lime-600  leading-6"
                                 required="">
                                 @foreach ($kelasList as $kelas)
                                     <option value="{{ $kelas }}"
@@ -141,7 +143,7 @@
                                 SPP</label>
                             <div class="mt-2">
                                 <select id="status_spp" name="status_spp"
-                                    class="block w-full px-3 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 leading-6"
+                                    class="block w-full px-3 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-lime-600 leading-6"
                                     required="">
                                     @foreach ($sppList as $status_spp)
                                         <option value="{{ $status_spp }}"
@@ -164,13 +166,13 @@
                         </div>
                     @endif
                     @php
-                        $golongan_list = ['Putra Sore', 'Putra Malam', 'Putri Sore', 'Putri Pagi'];
+                        $golongan_list = ['Putra', 'Putri'];
                     @endphp
                     <div class="col-span-3">
                         <label for="golongan" class="block  font-medium leading-6 text-gray-900">Golongan</label>
                         <div class="mt-2">
                             <select id="golongan" name="golongan"
-                                class="block w-full px-3 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 leading-6"
+                                class="block w-full px-3 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-lime-600 leading-6"
                                 required="">
                                 @foreach ($golongan_list as $golongan)
                                     <option value="{{ $golongan }}"
@@ -186,7 +188,7 @@
                             {{ isset($user) ? $user->name : '' }}</label>
                         <div class="mt-2"> --}}
                         <input type="hidden" name="operator_id" id="operator_id" value="{{ auth()->user()->id }}"
-                            class="block px-3 w-fit rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600  leading-6">
+                            class="block px-3 w-fit rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-lime-600  leading-6">
                     </div>
                 </div>
             </div>
@@ -285,7 +287,7 @@
 
                                     <div class="col-span-2 my-2">
                                         <select name="bulan[]"
-                                            class="w-full rounded-md border-0 py-1.5 text-gray-900 ring-1 ring-gray-300 focus:ring-indigo-600">
+                                            class="w-full rounded-md border-0 py-1.5 text-gray-900 ring-1 ring-gray-300 focus:ring-lime-600">
                                             <option value="">-- Bulan --</option>
                                             @foreach (range(1, 12) as $bln)
                                                 <option value="{{ $bln }}">
@@ -298,7 +300,7 @@
 
                                     <div class="col-span-2 my-2">
                                         <select name="tahun[]"
-                                            class="w-full rounded-md border-0 py-1.5 text-gray-900 ring-1 ring-gray-300 focus:ring-indigo-600">
+                                            class="w-full rounded-md border-0 py-1.5 text-gray-900 ring-1 ring-gray-300 focus:ring-lime-600">
                                             <option value="">-- Tahun --</option>
                                             @foreach (range(date('Y'), date('Y') + 5) as $thn)
                                                 <option value="{{ $thn }}">{{ $thn }}</option>
@@ -310,7 +312,7 @@
                                     @endphp
                                     <div class="col-span-2 my-2">
                                         <select name="status[]"
-                                            class="w-full rounded-md border-0 py-1.5 text-gray-900 ring-1 ring-gray-300 focus:ring-indigo-600">
+                                            class="w-full rounded-md border-0 py-1.5 text-gray-900 ring-1 ring-gray-300 focus:ring-lime-600">
                                             <option value="">-- Status --</option>
                                             @foreach ($sppList as $status_spp)
                                                 <option value="{{ $status_spp }}">
@@ -355,7 +357,7 @@
         </div>
         <div class="mt-2 flex items-center justify-end gap-x-6">
             <a href="/dashboard/santri"
-                class=" mt-6 mb-1 w-fit inline-flex justify-center items-center rounded-md bg-blue-600 px-5 py-2  font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 text-sm leading-6">
+                class=" mt-6 mb-1 w-fit inline-flex justify-center items-center rounded-md bg-red-600 px-5 py-2  font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600 text-sm leading-6">
                 <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                     class="-ml-0.5 mr-1.5 size-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
@@ -413,17 +415,17 @@
 
             row.innerHTML = `
             <div class="col-span-2 my-2">
-                <select name="bulan[]" class="w-full rounded-md border-0 py-1.5 text-gray-900 ring-1 ring-gray-300 focus:ring-indigo-600">
+                <select name="bulan[]" class="w-full rounded-md border-0 py-1.5 text-gray-900 ring-1 ring-gray-300 focus:ring-lime-600">
                     ${bulanOptions}
                 </select>
             </div>
             <div class="col-span-2 my-2">
-                <select name="tahun[]" class="w-full rounded-md border-0 py-1.5 text-gray-900 ring-1 ring-gray-300 focus:ring-indigo-600">
+                <select name="tahun[]" class="w-full rounded-md border-0 py-1.5 text-gray-900 ring-1 ring-gray-300 focus:ring-lime-600">
                     ${tahunOptions}
                 </select>
             </div>
             <div class="col-span-2 my-2">
-                <select name="status[]" class="w-full rounded-md border-0 py-1.5 text-gray-900 ring-1 ring-gray-300 focus:ring-indigo-600">
+                <select name="status[]" class="w-full rounded-md border-0 py-1.5 text-gray-900 ring-1 ring-gray-300 focus:ring-lime-600">
                     ${statusOptions}
                 </select>
             </div>

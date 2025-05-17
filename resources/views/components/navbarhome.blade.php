@@ -1,4 +1,4 @@
-<header class=" shadow sticky top-0 z-10 bg-blue-800 text-white" x-data="{ isOpen: false, isOpenP: false }">
+<header class=" shadow sticky top-0 z-10 bg-gradient-to-br from-green-500 to-lime-500 text-white" x-data="{ isOpen: false, isOpenP: false }">
     <nav class="mx-auto flex max-w-8xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <a href="/" class="-m-1.5   ">
             <div class="flex lg:flex-1 items-center">
@@ -7,10 +7,10 @@
                 </div>
                 <div class="mx-4">
                     <p class=" text-sm font-semibold ">
-                        LEMBAGA PENDIDIKAN TAHSIN & TAHFIZH AL-QURAN
+                        LEMBAGA PENDIDIKAN TAHSIN & TAHFIZH AL-QUR'AN
                     </p>
                     <p class="text-base/5 font-semibold ">
-                        KHOIRUNNASYIEN
+                        AL JAUHAR
                     </p>
                 </div>
             </div>
@@ -44,7 +44,7 @@
         <!-- Background backdrop, show/hide based on slide-over state. -->
         <div class="fixed inset-0 z-10">
             <div
-                class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-blue-800 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-gradient-to-br to-green-500 from-lime-500 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                 <div class="flex items-center justify-between">
                     <a href="/" class="-m-1.5 p-1.5">
                         <div class="flex lg:flex-1 items-center">
@@ -53,7 +53,7 @@
                             </div>
                             <div class="mx-4">
                                 <p class="text-base/5 font-semibold ">
-                                    KHOIRUNNASYIEN
+                                    AL JAUHAR
                                 </p>
                             </div>
                         </div>
@@ -68,18 +68,18 @@
                 </div>
 
                 <div class="mt-6 flow-root">
-                    <div class="-my-6 divide-y divide-cyan-500">
+                    <div class="-my-6 divide-y divide-lime-500">
                         <div class="space-y-2 py-6">
                             <a href="{{ asset('download/Informasi_Lembaga.pdf') }}"
-                                class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold  hover:bg-blue-400">INFORMASI
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold  hover:bg-lime-400">INFORMASI
                                 LEMBAGA</a>
                             <a href="/pendaftaran#pendaftaran"
-                                class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold  hover:bg-blue-400">PENDAFTARAN</a>
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold  hover:bg-lime-400">PENDAFTARAN</a>
                             <a href="/cek_spp#cek"
-                                class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold  hover:bg-blue-400">CEK
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold  hover:bg-lime-400">CEK
                                 SPP SANTRI</a>
                             <a href="/cek_kelas#cek"
-                                class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold  hover:bg-blue-400">CEK
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold  hover:bg-lime-400">CEK
                                 PERKEMBANGAN SANTRI</a>
                         </div>
                         {{-- <div class="py-6">

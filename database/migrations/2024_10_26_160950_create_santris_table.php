@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nama');
             $table->integer('nis')->unique();
-            $table->string('kelas')->default('Tahfidz');
+            $table->string('kelas')->default('Tahsin');
             $table->boolean('status_spp')->default(false);
             $table->string('golongan');
             // $table->unsignedBigInteger('operator_id');
