@@ -11,16 +11,26 @@ class Santri extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['nama', 'nis', 'tanggal_lahir','tempat_lahir', 'kelas', 'status_spp', 'golongan', 'operator_id'];
+    protected $fillable = ['nama', 'nis', 'tanggal_lahir','tempat_lahir', 'kelas', 'status_spp', 'golongan', 'operator_id', 'pembimbing_id'];
 
     public function operator(): BelongsTo
     {
         return $this->belongsTo(User::class);
     }
 
+    public function pembimbing()
+    {
+        return $this->belongsTo(User::class, 'pembimbing_id');
+    }
+
     public function payments()
     {
         return $this->hasMany(Payment::class);
+    }
+
+    public function nilais()
+    {
+        return $this->hasMany(Nilai::class);
     }
 
     public function scopeSearch(Builder $query): void
