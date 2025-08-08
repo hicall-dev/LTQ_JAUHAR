@@ -201,7 +201,7 @@
                     <img src="{{ public_path('img/logo.png') }}" width="80" height="80" alt="">
                 </td>
                 <td>
-                    <h2>LEMBAGA TAHSIN & TAHFIZH QURAN TERPADU AL JAUHAR</h2>
+                    <h2>LEMBAGA TAHSIN & TAHFIZH AL QURAN AL JAUHAR</h2>
                 </td>
             </tr>
         </table>

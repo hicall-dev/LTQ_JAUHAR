@@ -34,10 +34,14 @@
                                 href="{{ asset('download/Informasi_Lembaga.pdf') }}"
                                 class=" text-blue-500 underline">Informasi Lembaga</a></li>
                         <li>Pembayaran secara Tunai dapat dilakukan Langsung di gedung lembaga.</li>
-                        <li>Pembayaran secara Non-tunai melalui transfer ke rekening berikut :</li>
+                        <li>Pembayaran secara Non-tunai melalui transfer ke rekening atau QRIS berikut :</li>
                         <li>
-                            <span class=" py-2 px-3 rounded-md font-bold text-white bg-gradient-to-tr to-green-500 from-lime-500 w-fit"> BNI | 8120919767 | yys Syifa Al Mukminin 
+                            <span class=" py-2 px-3 rounded-md font-bold text-white bg-gradient-to-tr to-green-500 from-lime-500 w-fit"> Mandiri | 1120024084480 | Ibnu Hajar
                             </span>
+                        </li>
+                        <li>
+                            <a href="https://drive.google.com/file/d/1VGd5MNz_8I8XTCQsiD1S3uvDEhxcUOxg/view?usp=drivesdk" class=" py-2 px-3 rounded-md font-bold text-white bg-gradient-to-tr to-green-500 from-lime-500 w-fit"> QRIS Al Jauhar
+                            </a>
                         </li>
                         <p class="font-bold">Kirimkan Dokumen untuk Konfirmasi</p>
                         <li>Kirimkan formulir pendaftaran yang telah diisi lengkap beserta bukti pembayaran (jika
