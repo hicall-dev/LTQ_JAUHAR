@@ -33,6 +33,11 @@ class Santri extends Model
         return $this->hasMany(Nilai::class);
     }
 
+    public function setorans()
+    {
+        return $this->hasMany(Setoran::class);
+    }
+
     public function scopeSearch(Builder $query): void
     {
         // dd(request());
@@ -56,5 +61,17 @@ class Santri extends Model
     public function getRouteKeyName()
     {
         return 'nis';
+    }
+
+    public function scopeSearchByNilai(Builder $query): void
+    {
+        /// Status
+        // semua, belum_ditambahkan, sudah_ditambahkan
+        $currentYear = now()->year;
+        $currentMonth = now()->month;
+        $query->whereHas('nilais', function($q) use ($currentYear, $currentMonth) {
+            $q->where('tahun', $currentYear)
+                ->where('bulan', '<=', $currentMonth);
+        });
     }
 }

@@ -54,6 +54,10 @@
                 </svg>
                 Tambah Santri
             </a>
+            <a href="/penilaian"
+                class=" mt-6 mb-1 mx-2 w-fit h-fit inline-flex justify-center items-center rounded-md bg-green-500 px-3 py-2  font-semibold text-white shadow-sm hover:bg-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-500">
+                Cek Penilaian
+            </a>
         @endif
     </div>
 

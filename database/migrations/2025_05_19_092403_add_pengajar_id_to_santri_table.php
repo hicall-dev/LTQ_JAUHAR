@@ -11,17 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('santris', function (Blueprint $table) {
-            $table->unsignedBigInteger('pembimbing')->nullable()->after('operator_id');
-            $table->foreign('pembimbing')->references('id')->on('users')->onDelete('set null');
-        });
+        // Schema::table('santris', function (Blueprint $table) {
+        //     $table->unsignedBigInteger('pembimbing')->nullable()->after('operator_id');
+        //     $table->foreign('pembimbing')->references('id')->on('users')->onDelete('set null');
+        // });
     }
 
     public function down(): void
     {
-        Schema::table('santris', function (Blueprint $table) {
-            $table->dropForeign(['pembimbing']);
-            $table->dropColumn('pembimbing');
-        });
+        // Schema::table('santris', function (Blueprint $table) {
+        //     $table->dropForeign(['pembimbing']);
+        //     $table->dropColumn('pembimbing');
+        // });
     }
 };
