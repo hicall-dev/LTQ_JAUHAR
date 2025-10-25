@@ -79,7 +79,8 @@ class DashboardSantriController extends Controller
             // 'operator_id' => 'required'
             'tanggal_lahir' => 'required',
             'tempat_lahir' => 'required',
-            'pembimbing_id' => 'required'
+            'pembimbing_id' => 'required',
+            'phone' => 'required',
         ]);
         $validatedData['operator_id'] = auth('web')->user()->id;
         $santri = Santri::create($validatedData); // <- $santri didefinisikan di sini
@@ -112,6 +113,11 @@ class DashboardSantriController extends Controller
             ->orderBy('tahun', 'desc')
             ->orderBy('bulan', 'desc')
             ->get();
+        $paymentThisMonth = $santri->payments()
+            ->where('bulan', now()->month)
+            ->where('tahun', now()->year)
+            ->where('status', 1)
+            ->first();
         return view(
             'detail',
             [
@@ -120,8 +126,7 @@ class DashboardSantriController extends Controller
                 'santri' => $santri,
                 'user' => $user,
                 'setorans' => $setorans,
-                // 'payments' => $payments,
-                // 'nilais' => $nilais
+                'alreadyPaidThisMonth' => $paymentThisMonth ? true : false
             ]
         );
     }
@@ -141,6 +146,11 @@ class DashboardSantriController extends Controller
             ->orderBy('bulan', 'desc')
             ->get();
         $pembimbing = User::where('role', 1)->get();
+        $paymentThisMonth = $santri->payments()
+            ->where('bulan', now()->month)
+            ->where('tahun', now()->year)
+            ->where('status', 1)
+            ->first();
         return view(
             'form',
             [
@@ -151,6 +161,7 @@ class DashboardSantriController extends Controller
                 'pembimbing' => $pembimbing,
                 'nilaiSekarang' => $nilaiSekarang,  // <-- kirim ke view
                 'setorans' => $setorans,
+                'alreadyPaidThisMonth' => $paymentThisMonth ? true : false
             ]
         );
     }
@@ -166,6 +177,7 @@ class DashboardSantriController extends Controller
             'tanggal_lahir' => '',
             'tempat_lahir' => '',
             'pembimbing_id' => '',
+            'phone' => ''
         ];
 
         $santriNilai = [];
