@@ -128,6 +128,7 @@
                                         $message = urlencode(
                                             \App\Helpers\WhatsappHelper::messageWaliSantri(
                                                 $santri->nama,
+                                                $santri->nis,
                                                 $bulan,
                                                 $tahun,
                                             ),
