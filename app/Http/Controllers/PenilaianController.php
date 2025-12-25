@@ -2,12 +2,60 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Nilai;
+use App\Models\Santri;
 use App\Models\User;
 use Illuminate\Http\Request;
 
 class PenilaianController extends Controller
 {
     public function index()
+    {
+        $auth = auth('web')->user();
+        if ($auth->role != 0) abort(404);
+
+
+        $currentYear  = now()->year;
+        $currentMonth = now()->month;
+
+        $title = 'Penilaian Bulan ' .  config('bulan.' . $currentMonth) . ' ' . $currentYear;
+
+        $asatidzs = User::with(['membimbing.nilais'])->where('role', 1)->get();
+
+        $results = [];
+
+        foreach ($asatidzs as $asatidz) {
+
+            $ustadzData = (object) [
+                'ustadz_id'    => $asatidz->id,
+                'ustadz_name'  => $asatidz->name,
+                'phone'        => $asatidz->phone,
+                'total_santri' => $asatidz->membimbing->count(),
+                'santris'      => [],
+            ];
+
+            foreach ($asatidz->membimbing as $santri) {
+
+                $sudahDinilaiBulanIni = $santri->nilais
+                    ->where('tahun', $currentYear)
+                    ->where('bulan', $currentMonth)
+                    ->isNotEmpty();
+
+                if (!$sudahDinilaiBulanIni) {
+                    $ustadzData->santris[] = (object) [
+                        'nis'  => $santri->nis,
+                        'name' => $santri->nama,
+                    ];
+                }
+            }
+
+            $results[] = $ustadzData;
+        }
+
+        return view('penilaian.index', compact('title', 'results'));
+    }
+
+    public function index_old()
     {
         $auth = auth('web')->user();
         $isAdmin = $auth->role == 0;
